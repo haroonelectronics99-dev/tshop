@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap');
+
+@theme {
+  --font-oswald: "Oswald", sans-serif;
+  --font-playfair: "Playfair Display", serif;
+  --font-poppins: "Poppins", sans-serif;
+  
+  --color-gold-50: #fbf8e6;
+  --color-gold-100: #f5ecc3;
+  --color-gold-200: #ebd991;
+  --color-gold-300: #e0c25e;
+  --color-gold-400: #d4af37; /* Primary Gold */
+  --color-gold-500: #b89228;
+  --color-gold-600: #96711d;
+  --color-gold-700: #78561a;
+  --color-gold-800: #63451b;
+  --color-gold-900: #553b1b;
+  
+  --color-luxury-black: #1a1a1a;
+  --color-luxury-cream: #fdfbf7;
+}
+
+body {
+  font-family: var(--font-poppins);
+  background-color: var(--color-luxury-cream);
+  color: var(--color-luxury-black);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-oswald);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.font-playfair {
+  font-family: var(--font-playfair);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(to right, #d4af37, #f5ecc3, #d4af37);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: 200% auto;
+  animation: shine 3s linear infinite;
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
